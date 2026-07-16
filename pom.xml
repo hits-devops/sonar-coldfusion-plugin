@@ -10,7 +10,7 @@
 
     <name>SonarQube Coldfusion Plugin</name>
     <description>Enables scanning of ColdFusion source files</description>
-    <url>https://github.com/cfmleditor/sonar-coldfusion</url>
+    <url>https://github.com/hits-devops/sonar-coldfusion-plugin</url>
 
     <organization>
         <name>StepStone GmbH</name>
@@ -25,14 +25,14 @@
     </licenses>
 
     <scm>
-        <connection>git@github.com:cfmleditor/sonar-coldfusion.git</connection>
-        <developerConnection>git@github.com:cfmleditor/sonar-coldfusion.git</developerConnection>
-        <url>https://github.com/cfmleditor/sonar-coldfusion</url>
+        <connection>git@github.com:hits-devops/sonar-coldfusion-plugin.git</connection>
+        <developerConnection>git@github.com:hits-devops/sonar-coldfusion-plugin.git</developerConnection>
+        <url>https://github.com/hits-devops/sonar-coldfusion-plugin</url>
     </scm>
     
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/cfmleditor/sonar-coldfusion/issues</url>
+        <url>https://github.com/hits-devops/sonar-coldfusion-plugin/issues</url>
     </issueManagement>
 
     <properties>
@@ -40,17 +40,9 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <sonar.version>9.0.0.45539</sonar.version>
-        <cflint.version>1.5.8</cflint.version>
+        <cflint.version>1.5.0</cflint.version>
         <sonar-analyzer-commons.version>1.16.0.719</sonar-analyzer-commons.version>
     </properties>
-
-    <repositories>
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/cfmleditor/cflint</url>
-        </repository>
-    </repositories>
 
     <dependencies>
         <dependency>
@@ -113,10 +105,10 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.cfmleditor</groupId>
-            <artifactId>cflint</artifactId>
+            <groupId>com.github.cflint</groupId>
+            <artifactId>CFLint</artifactId>
             <version>${cflint.version}</version>
-        </dependency> 
+        </dependency>
     </dependencies>
 
     <build>
@@ -130,7 +122,7 @@
                     <pluginClass>com.stepstone.sonar.plugin.coldfusion.ColdFusionPlugin</pluginClass>
                     <pluginName>ColdFusion</pluginName>
                     <pluginDescription>cflint ${cflint.version} Plugin for Sonarqube</pluginDescription>
-                    <pluginSourcesUrl>https://github.com/cfmleditor/sonar-coldfusion</pluginSourcesUrl>
+                    <pluginSourcesUrl>https://github.com/hits-devops/sonar-coldfusion-plugin</pluginSourcesUrl>
                 </configuration>
             </plugin>
             <plugin>
